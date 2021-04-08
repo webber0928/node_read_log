@@ -21,7 +21,7 @@ const server = http.createServer(async (req, res) => {
     let result4 = await readFile('../onShoreByDay.log');
     let tp = (key, str) => `<h2>${key}</h2><p>${str}</p>`;
     res.writeHead(200, {'Content-Type': 'text/html'});
-    res.write(`<html><body>
+    res.write(`<html><head><meta charset="utf-8"></head><body>
       ${tp('fundListOffshore', result1)}
       ${tp('fundListOnshore' , result2)}
       ${tp('offShoreByDay'   , result3)}
