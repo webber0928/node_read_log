@@ -9,7 +9,7 @@ function readFile(path) {
   const rl        = readline.createInterface(instream, outstream);
   return new Promise((resolve) => {
     let str = '';
-    rl.on('line', l => str += `${l}\n`).on('close', () => resolve(str));
+    rl.on('line', l => str += `${l}<br>`).on('close', () => resolve(str));
   });
 }
 
